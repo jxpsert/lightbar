@@ -1,0 +1,35 @@
+:root {
+  --controller-width: 100%;
+  --controller-button-size: 10%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+.container > div {
+  width: 100%;
+  height: 100%;
+}
+
+div.top {
+  background-color: rgb(139, 191, 202);
+}
+
+div.bottom {
+  background-color: black;
+}

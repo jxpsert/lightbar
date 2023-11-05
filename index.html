@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Freedom</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/controller.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+        </div>
+        <div class="bottom">
+            <div id="controller">
+                <div class="button siren" id="siren">
+                </div>
+                <div class="button blue" id="blue">
+                </div>
+                <div class="button leftlight" id="leftlight">
+                </div>
+                <div class="button frontlight" id="frontlight">
+                </div>
+                <div class="button rightlight" id="rightlight">
+                </div>
+                <div class="button green" id="green">
+                </div>
+                <div class="button headlight" id="headlight">
+                </div>
+                <div class="button stopfront" id="stopfront">
+                </div>
+                <div class="button stopback" id="stopback">
+                </div>
+                <div class="button volg" id="volg">
+                </div>
+                <div class="button amber" id="amber">
+                </div>
+                <div class="button power" id="power">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="beep" src="assets/sound/beep.mp3"></audio>
+    <audio id="longbeep" src="assets/sound/longbeep.mp3"></audio>
+    <audio id="sirenaudio" src="assets/sound/siren.mp3" loop></audio>
+
+    <script src="scripts/Controller.js" defer></script>
+    <script src="scripts/buttons/Button.js" defer></script>
+    <script src="scripts/buttons/PowerButton.js" defer></script>
+    <script src="scripts/buttons/BlueButton.js" defer></script>
+    <script src="scripts/buttons/AmberButton.js" defer></script>
+    <script src="scripts/buttons/GreenButton.js" defer></script>
+    <script src="scripts/buttons/IdleStopButton.js" defer></script>
+    <script src="scripts/buttons/HeadlightButton.js" defer></script>
+    <script src="scripts/buttons/SirenButton.js" defer></script>
+    <script src="scripts/buttons/LeftLightButton.js" defer></script>
+    <script src="scripts/buttons/RightLightButton.js" defer></script>
+    <script src="scripts/buttons/FrontLightButton.js" defer></script>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+
+</html>
