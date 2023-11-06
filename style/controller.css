@@ -1,6 +1,7 @@
-#controller {
+#controller
+{
   width: var(--controller-width);
-  background-image: url("../assets/img/base.png");
+  background-image: url("../assets/img/base.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   padding-top: 31.25%;
@@ -8,200 +9,236 @@
   position: absolute;
 }
 
-.button {
+.button
+{
   position: absolute;
   width: var(--controller-button-size);
   aspect-ratio: 1/1;
 }
 
-.button:hover {
+.button:hover
+{
   cursor: pointer;
 }
 
-.button.siren {
+.button.siren
+{
   top: 34%;
   left: 1.25%;
-  background-image: url("../assets/img/siren_off-01.png");
+  background-image: url("../assets/img/siren_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.siren.on {
-  background-image: url("../assets/img/siren-01.png");
+.button.siren.on
+{
+  background-image: url("../assets/img/siren-01.jpg");
 }
 
-.button.siren.powered {
+.button.siren.powered
+{
   background-color: rgba(255, 0, 0, 0.5);
   background-blend-mode: multiply;
 }
 
-.button.blue {
+.button.blue
+{
   top: 34%;
   left: 16%;
-  background-image: url("../assets/img/light_off-01.png");
+  background-image: url("../assets/img/light_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.blue.on {
-  background-image: url("../assets/img/blue-01.png");
+.button.blue.on
+{
+  background-image: url("../assets/img/blue-01.jpg");
 }
 
-.button.blue.powered {
+.button.blue.powered
+{
   background-color: rgba(36, 173, 227, 0.5);
   background-blend-mode: multiply;
 }
 
-.button.leftlight {
+.button.leftlight
+{
   top: 13.5%;
   left: 30%;
-  background-image: url("../assets/img/leftlight_off-01.png");
+  background-image: url("../assets/img/leftlight_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.leftlight.on {
-  background-image: url("../assets/img/leftlight-01.png");
+.button.leftlight.on
+{
+  background-image: url("../assets/img/leftlight-01.jpg");
 }
 
-.button.leftlight.powered {
+.button.leftlight.powered
+{
   filter: brightness(1.25);
 }
 
-.button.frontlight {
+.button.frontlight
+{
   top: 13.5%;
   left: 44%;
-  background-image: url("../assets/img/frontlight_off-01.png");
+  background-image: url("../assets/img/frontlight_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.button.frontlight.on {
-  background-image: url("../assets/img/frontlight-01.png");
+.button.button.frontlight.on
+{
+  background-image: url("../assets/img/frontlight-01.jpg");
 }
 
-.button.frontlight.powered {
+.button.frontlight.powered
+{
   filter: brightness(1.25);
 }
 
-.button.rightlight {
+.button.rightlight
+{
   top: 13.5%;
   left: 58.5%;
-  background-image: url("../assets/img/rightlight_off-01.png");
+  background-image: url("../assets/img/rightlight_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.button.rightlight.on {
-  background-image: url("../assets/img/rightlight-01.png");
+.button.button.rightlight.on
+{
+  background-image: url("../assets/img/rightlight-01.jpg");
 }
 
-.button.rightlight.powered {
+.button.rightlight.powered
+{
   filter: brightness(1.25);
 }
 
-.button.green {
+.button.green
+{
   top: 13.5%;
   left: 73%;
-  background-image: url("../assets/img/light_off-01.png");
+  background-image: url("../assets/img/light_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.green.on {
-  background-image: url("../assets/img/green-01.png");
+.button.green.on
+{
+  background-image: url("../assets/img/green-01.jpg");
 }
 
-.button.green.powered {
+.button.green.powered
+{
   background-color: rgba(0, 255, 0, 0.5);
   background-blend-mode: multiply;
 }
 
-.button.headlight {
+.button.headlight
+{
   top: 13.5%;
   left: 87.5%;
-  background-image: url("../assets/img/headlight_off-01.png");
+  background-image: url("../assets/img/headlight_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.button.headlight.on {
-  background-image: url("../assets/img/headlight-01.png");
+.button.button.headlight.on
+{
+  background-image: url("../assets/img/headlight-01.jpg");
 }
 
-.button.stopfront {
+.button.stopfront
+{
   top: 57.5%;
   left: 30%;
-  background-image: url("../assets/img/stopfront_off-01.png");
+  background-image: url("../assets/img/stopfront_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.stopfront.on {
-  background-image: url("../assets/img/stopfront-01.png");
+.button.stopfront.on
+{
+  background-image: url("../assets/img/stopfront-01.jpg");
 }
 
-.button.stopfront.powered {
+.button.stopfront.powered
+{
   filter: brightness(1.25);
 }
 
-.button.stopback {
+.button.stopback
+{
   top: 57.5%;
   left: 44%;
-  background-image: url("../assets/img/stopback_off-01.png");
+  background-image: url("../assets/img/stopback_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.stopback.on {
-  background-image: url("../assets/img/stopback-01.png");
+.button.stopback.on
+{
+  background-image: url("../assets/img/stopback-01.jpg");
 }
 
-.button.stopback.powered {
+.button.stopback.powered
+{
   filter: brightness(1.25);
 }
 
-.button.volg {
+.button.volg
+{
   top: 57.5%;
   left: 58.5%;
-  background-image: url("../assets/img/volg_off-01.png");
+  background-image: url("../assets/img/volg_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.volg.on {
-  background-image: url("../assets/img/volg-01.png");
+.button.volg.on
+{
+  background-image: url("../assets/img/volg-01.jpg");
 }
 
-.button.volg.powered {
+.button.volg.powered
+{
   filter: brightness(1.25);
 }
 
-.button.amber {
+.button.amber
+{
   top: 57.5%;
   left: 73%;
-  background-image: url("../assets/img/light_off-01.png");
+  background-image: url("../assets/img/light_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.amber.on {
-  background-image: url("../assets/img/amber-01.png");
+.button.amber.on
+{
+  background-image: url("../assets/img/amber-01.jpg");
 }
 
-.button.amber.powered {
+.button.amber.powered
+{
   background-color: rgba(247, 148, 24, 0.5);
   background-blend-mode: multiply;
 }
 
-.button.power {
+.button.power
+{
   top: 57.5%;
   left: 87.5%;
-  background-image: url("../assets/img/power_off-01.png");
+  background-image: url("../assets/img/power_off-01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.button.power.on {
-  background-image: url("../assets/img/power-01.png");
+.button.power.on
+{
+  background-image: url("../assets/img/power-01.jpg");
 }
