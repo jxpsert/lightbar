@@ -1,256 +1,313 @@
-#lightbar
-{
-    margin-top: 5em;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+#lightbar {
+  margin-top: 5em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
-#lightbar > img
-{
-    margin: auto;
-    width: 95%;
-    object-fit: contain;
-    z-index: 99;
+#lightbar > img {
+  margin: auto;
+  width: 95%;
+  object-fit: contain;
+  z-index: 99;
 }
 
-#lightbar > #lights
-{
-    background-color: lightgrey;
-    position: absolute;
-    width: 93%;
-    height: 8%;
-    left: 3.5%;
-    top: 18.5%;
+#lightbar > #lights {
+  background-color: lightgrey;
+  position: absolute;
+  width: 93%;
+  height: 44%;
+  left: 3.5%;
+  top: 6%;
 }
 
-#lights > #blue-left
-{
-    z-index: 50;
-    background-color: rgb(72, 188, 255);
-    position: absolute;
-    top: 0;
-    height: 49%;
-    width: 15%;
-
-    box-shadow:
-        0 0 40px 30px rgb(72, 188, 255),
-        0 0 80px 60px rgb(72, 188, 255)
+#lightbar > #lights-glow {
+  position: absolute;
+  width: 93%;
+  height: 44%;
+  left: 3.5%;
+  top: 6%;
+  z-index: 100;
 }
 
-#lights > #blue-right
-{
-    z-index: 50;
-    background-color: rgb(72, 188, 255);
-    position: absolute;
-    top: 0;
-    left: 85%;
-    height: 49%;
-    width: 15%;
+/* Lights */
 
-    box-shadow:
-        0 0 40px 30px rgb(72, 188, 255),
-        0 0 80px 60px rgb(72, 188, 255)
+#lights > #blue-left {
+  z-index: 50;
+  background-color: rgb(72, 188, 255);
+  position: absolute;
+  top: 0;
+  height: 49%;
+  width: 15%;
 }
 
-#lights > #amber-left
-{
-    z-index: 40;
-    background-color: rgb(252, 179, 44);
-    position: absolute;
-    top: 51%;
-    height: 50%;
-    width: 15%;
-
-    box-shadow:
-        0 0 40px 30px rgb(252, 179, 44),
-        0 0 80px 60px rgb(252, 179, 44);
+#lights > #blue-right {
+  z-index: 50;
+  background-color: rgb(72, 188, 255);
+  position: absolute;
+  top: 0;
+  left: 85%;
+  height: 49%;
+  width: 15%;
 }
 
-#lights > #amber-right
-{
-    z-index: 40;
-    background-color: rgb(252, 179, 44);
-    position: absolute;
-    top: 51%;
-    left: 85%;
-    height: 50%;
-    width: 15%;
-
-    box-shadow:
-        0 0 40px 30px rgb(252, 179, 44),
-        0 0 80px 60px rgb(252, 179, 44);
+#lights > #amber-left {
+  z-index: 40;
+  background-color: rgb(252, 179, 44);
+  position: absolute;
+  top: 51%;
+  height: 50%;
+  width: 15%;
 }
 
-#lights > #green-left
-{
-    z-index: 30;
-    background-color: lime;
-    position: absolute;
-    top: 38%;
-    left: 20%;
-    height: 50%;
-    width: 5%;
-
-    box-shadow:
-        0 0 40px 30px lime,
-        0 0 80px 60px lime;
+#lights > #amber-right {
+  z-index: 40;
+  background-color: rgb(252, 179, 44);
+  position: absolute;
+  top: 51%;
+  left: 85%;
+  height: 50%;
+  width: 15%;
 }
 
-#white-front
-{
-    background-color: white;
-    position: absolute;
-    width: 55%;
-    height: 100%;
-    left: 25%;
-    opacity: 0;
-
-    box-shadow:
-        0 0 40px 30px white,
-        0 0 80px 60px white;
+#lights > #green-left {
+  z-index: 30;
+  background-color: lime;
+  position: absolute;
+  top: 38%;
+  left: 20%;
+  height: 50%;
+  width: 5%;
 }
 
-#lights > :not(.on)
-{
-    opacity: 0;
+#white-front {
+  background-color: white;
+  position: absolute;
+  width: 55%;
+  height: 100%;
+  left: 25%;
+  visibility: hidden;
 }
 
-#stop
-{
-    position: absolute;
-    top: 0;
-    left: 32.5%;
-    width: 35%;
-    height: 100%;
-    text-align: center;
-    z-index: 100;
+#lights > :not(.on) {
+  visibility: hidden;
 }
 
-.stop
-{
-    display: none;
-    font-size: 2rem;
-    color: red;
+#stop {
+  position: absolute;
+  top: 0;
+  left: 32.5%;
+  width: 35%;
+  height: 100%;
+  text-align: center;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    font-family: Verdana;
-    font-weight: bold;
+  font-size: calc(3em + 3vw);
+  color: red;
 
-    text-shadow: 0 0 10px rgb(255, 124, 124);
+  font-family: "Epson MX DMP";
 
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
+  text-shadow: 0 0 10px rgb(255, 98, 98);
+
+  margin-top: -0.15em;
 }
 
-.politie
-{
-    display: none;
-    font-size: 2rem;
-    color: red;
+.stop {
+  display: none;
 
-    font-family: Verdana;
-    font-weight: bold;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
 
-    text-shadow: 0 0 10px rgb(255, 124, 124);
+.politie {
+  display: none;
 
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 .politie.show,
-.stop.show
-{
-    display: block;
+.stop.show {
+  display: block;
 }
 
-#stop.on
-{
-    opacity: 1;
+#stop.on {
+  visibility: visible;
 }
 
-div.on.flashing
-{
-    animation: doubleflash .8s infinite;
-    -webkit-animation-timing-function: steps(1, end);
-    -moz-animation-timing-function: steps(1, end);
-    -ms-animation-timing-function: steps(1, end);
-    -o-animation-timing-function: steps(1, end);
-    animation-timing-function: steps(1, end);
+/* Glows */
+
+#lights-glow > #blue-left-glow {
+  z-index: 50;
+  background-color: rgb(72, 188, 255);
+  position: absolute;
+  top: 0;
+  height: 49%;
+  width: 15%;
+  opacity: 0.75;
+  visibility: hidden;
+
+  box-shadow: 0 0 40px 30px rgb(72, 188, 255), 0 0 80px 60px rgb(72, 188, 255);
 }
 
-div.on.flashing-alt
-{
-    animation: doubleflash .75s reverse infinite;
-    -webkit-animation-timing-function: steps(1, end);
-    -moz-animation-timing-function: steps(1, end);
-    -ms-animation-timing-function: steps(1, end);
-    -o-animation-timing-function: steps(1, end);
-    animation-timing-function: steps(1, end);
+#lights-glow > #blue-right-glow {
+  z-index: 50;
+  background-color: rgb(72, 188, 255);
+  position: absolute;
+  top: 0;
+  left: 85%;
+  height: 49%;
+  width: 15%;
+  opacity: 0.75;
+  visibility: hidden;
+
+  box-shadow: 0 0 40px 30px rgb(72, 188, 255), 0 0 80px 60px rgb(72, 188, 255);
 }
 
-#green-left.on.flashing
-{
-    animation: flash 1.5s infinite;
-    -webkit-animation-timing-function: steps(1, end);
-    -moz-animation-timing-function: steps(1, end);
-    -ms-animation-timing-function: steps(1, end);
-    -o-animation-timing-function: steps(1, end);
-    animation-timing-function: steps(1, end);
+#lights-glow > #amber-left-glow {
+  z-index: 40;
+  background-color: rgb(252, 179, 44);
+  position: absolute;
+  top: 51%;
+  height: 50%;
+  width: 15%;
+  opacity: 0.75;
+  visibility: hidden;
+
+  box-shadow: 0 0 40px 30px rgb(252, 179, 44), 0 0 80px 60px rgb(252, 179, 44);
 }
 
-#white-front.on
-{
-    opacity: 1;
+#lights-glow > #amber-right-glow {
+  z-index: 40;
+  background-color: rgb(252, 179, 44);
+  position: absolute;
+  top: 51%;
+  left: 85%;
+  height: 50%;
+  width: 15%;
+  opacity: 0.75;
+  visibility: hidden;
+
+  box-shadow: 0 0 40px 30px rgb(252, 179, 44), 0 0 80px 60px rgb(252, 179, 44);
 }
 
-@keyframes flash
-{
-    0%
-    {
-        opacity: 0;
-    }
+#lights-glow > #green-left-glow {
+  z-index: 30;
+  background-color: lime;
+  position: absolute;
+  top: 38%;
+  left: 20%;
+  height: 50%;
+  width: 5%;
+  opacity: 0.75;
+  visibility: hidden;
 
-    50%
-    {
-        opacity: 1;
-    }
-
-    100%
-    {
-        opacity: 0;
-    }
+  box-shadow: 0 0 40px 30px lime, 0 0 80px 60px lime;
 }
 
-@keyframes doubleflash
-{
-    0%
-    {
-        opacity: 0;
-    }
+#white-front-left-glow {
+  background-color: white;
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  left: 25%;
+  opacity: 0.75;
+  visibility: hidden;
 
-    25%
-    {
-        opacity: 1;
-    }
+  box-shadow: 0 0 40px 30px white, 0 0 80px 60px white;
+}
 
-    35%
-    {
-        opacity: 0;
-    }
+#white-front-right-glow {
+  background-color: white;
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  left: 70%;
+  opacity: 0.75;
+  visibility: hidden;
 
-    40%
-    {
-        opacity: 1;
-    }
+  box-shadow: 0 0 40px 30px white, 0 0 80px 60px white;
+}
 
-    45%
-    {
-        opacity: 0;
-    }
+div.on.flashing {
+  animation: doubleflash 0.5s infinite;
+  -webkit-animation-timing-function: steps(1, end);
+  -moz-animation-timing-function: steps(1, end);
+  -ms-animation-timing-function: steps(1, end);
+  -o-animation-timing-function: steps(1, end);
+  animation-timing-function: steps(1, end);
+}
+
+div.on.flashing-alt {
+  animation: doubleflash 0.5s reverse infinite;
+  -webkit-animation-timing-function: steps(1, end);
+  -moz-animation-timing-function: steps(1, end);
+  -ms-animation-timing-function: steps(1, end);
+  -o-animation-timing-function: steps(1, end);
+  animation-timing-function: steps(1, end);
+}
+
+#green-left.on.flashing {
+  animation: flash 2s infinite;
+  -webkit-animation-timing-function: steps(1, end);
+  -moz-animation-timing-function: steps(1, end);
+  -ms-animation-timing-function: steps(1, end);
+  -o-animation-timing-function: steps(1, end);
+  animation-timing-function: steps(1, end);
+}
+
+#white-front.on,
+#white-front-left-glow.on,
+#white-front-right-glow.on {
+  visibility: visible;
+}
+
+@keyframes flash {
+  0% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes doubleflash {
+  0% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: visible;
+  }
+
+  35% {
+    visibility: hidden;
+  }
+
+  40% {
+    visibility: visible;
+  }
+
+  45% {
+    visibility: hidden;
+  }
 }

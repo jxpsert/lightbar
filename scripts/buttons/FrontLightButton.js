@@ -16,8 +16,12 @@ class FrontLightButton extends Button {
 
     if (this._enabled) {
       document.querySelector("#white-front").classList.add("on");
+      document.querySelector("#white-front-left-glow").classList.add("on");
+      document.querySelector("#white-front-right-glow").classList.add("on");
     } else {
       document.querySelector("#white-front").classList.remove("on");
+      document.querySelector("#white-front-left-glow").classList.remove("on");
+      document.querySelector("#white-front-right-glow").classList.remove("on");
     }
 
     if (this._flashing) {
@@ -37,6 +41,8 @@ class FrontLightButton extends Button {
   kill = () => {
     this.disable();
     document.querySelector("#white-front").classList.remove("on");
+    document.querySelector("#white-front-left-glow").classList.remove("on");
+    document.querySelector("#white-front-right-glow").classList.remove("on");
 
     this._flashing = false;
 

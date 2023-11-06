@@ -18,12 +18,16 @@ class AmberButton extends Button {
       clearInterval(this._flashInterval);
 
       document.querySelector("#amber-left").classList.remove("on");
+      document.querySelector("#amber-left-glow").classList.remove("on");
       document.querySelector("#amber-right").classList.remove("on");
+      document.querySelector("#amber-right-glow").classList.remove("on");
     } else {
       this.enable();
 
       document.querySelector("#amber-left").classList.add("on");
+      document.querySelector("#amber-left-glow").classList.add("on");
       document.querySelector("#amber-right").classList.add("on");
+      document.querySelector("#amber-right-glow").classList.add("on");
 
       this._flashing = true;
       this._flashInterval = setInterval(() => {
@@ -37,7 +41,9 @@ class AmberButton extends Button {
     this.disable();
 
     document.querySelector("#amber-left").classList.remove("on");
+    document.querySelector("#amber-left-glow").classList.remove("on");
     document.querySelector("#amber-right").classList.remove("on");
+    document.querySelector("#amber-right-glow").classList.remove("on");
 
     this._flashing = false;
 

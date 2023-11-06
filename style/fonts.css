@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Epson MX DMP";
+  src: url("../assets/fonts/EpsonMXSeriesDMP/EpsonMXSeriesDMP-Regular.woff")
+      format("woff"),
+    url("../assets/fonts/EpsonMXSeriesDMP/EpsonMXSeriesDMP-Regular.woff2")
+      format("woff2");
+}

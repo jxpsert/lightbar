@@ -18,7 +18,9 @@ class BlueButton extends Button {
       this.disable();
 
       document.querySelector("#blue-left").classList.remove("on");
+      document.querySelector("#blue-left-glow").classList.remove("on");
       document.querySelector("#blue-right").classList.remove("on");
+      document.querySelector("#blue-right-glow").classList.remove("on");
 
       if (this._controller._buttons["headlight"]._flashing) {
         this._controller._buttons["headlight"].stopFlashing();
@@ -32,7 +34,9 @@ class BlueButton extends Button {
       }, 1000);
 
       document.querySelector("#blue-left").classList.add("on");
+      document.querySelector("#blue-left-glow").classList.add("on");
       document.querySelector("#blue-right").classList.add("on");
+      document.querySelector("#blue-right-glow").classList.add("on");
 
       if (this._controller._buttons["headlight"]._flashOnBlue) {
         this._controller._buttons["headlight"].enable();
@@ -46,7 +50,9 @@ class BlueButton extends Button {
     this.disable();
 
     document.querySelector("#blue-left").classList.remove("on");
+    document.querySelector("#blue-left-glow").classList.remove("on");
     document.querySelector("#blue-right").classList.remove("on");
+    document.querySelector("#blue-right-glow").classList.remove("on");
 
     this._flashing = false;
 

@@ -16,6 +16,7 @@ class GreenButton extends Button {
       this.disable();
 
       document.querySelector("#green-left").classList.remove("on");
+      document.querySelector("#green-left-glow").classList.remove("on");
 
       this._flashing = false;
       clearInterval(this._flashInterval);
@@ -27,12 +28,17 @@ class GreenButton extends Button {
       }, 1000);
 
       document.querySelector("#green-left").classList.add("on");
+      document.querySelector("#green-left-glow").classList.add("on");
     }
     this._controller.beep();
   };
 
   kill = () => {
     this.disable();
+
+    document.querySelector("#green-left").classList.remove("on");
+    document.querySelector("#green-left-glow").classList.remove("on");
+
     clearInterval(this._flashInterval);
   };
 }
