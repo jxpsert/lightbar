@@ -25,17 +25,18 @@ class SirenButton extends Button {
 
       this._controller.siren(false);
     } else {
-      this._flashing = true;
-      this._flashInterval = setInterval(() => {
-        this.toggle();
-      }, 1000);
-
       if (!this._controller._buttons["blue"]._flashing) {
         this._controller._buttons["blue"].click();
         this._disableBlueOnStop = true;
       } else {
         this._disableBlueOnStop = false;
       }
+
+      this.enable();
+      this._flashing = true;
+      this._flashInterval = setInterval(() => {
+        this.toggle();
+      }, 1000);
 
       this._controller.siren(true);
     }
