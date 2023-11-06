@@ -13,11 +13,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/controller.css">
+    <link rel="stylesheet" href="style/lightbar.css">
 </head>
 
 <body>
     <div class="container">
         <div class="top">
+            <div id="lightbar">
+                <div id="lights">
+                    <div id="blue-left" class="flashing"></div>
+                    <div id="blue-right" class="flashing-alt"></div>
+                    <div id="amber-left" class="flashing"></div>
+                    <div id="amber-right" class="flashing-alt"></div>
+                    <div id="green-left" class="flashing"></div>
+                    <div id="white-front" class=""></div>
+
+                    <div id="stop" class="on">
+                        <span id="stopstop" class="stop">STOP</span>
+                        <span id="stoppolitie" class="politie">POLITIE</span>
+                    </div>
+                </div>
+                <img src="assets/img/lightbar.png" alt="lightbar">
+            </div>
         </div>
         <div class="bottom">
             <div id="controller">
@@ -65,6 +82,7 @@
     <script src="scripts/buttons/LeftLightButton.js" defer></script>
     <script src="scripts/buttons/RightLightButton.js" defer></script>
     <script src="scripts/buttons/FrontLightButton.js" defer></script>
+    <script src="scripts/buttons/FrontStopButton.js" defer></script>
 
     <script src="scripts/main.js" defer></script>
 </body>

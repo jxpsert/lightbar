@@ -1,0 +1,256 @@
+#lightbar
+{
+    margin-top: 5em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#lightbar > img
+{
+    margin: auto;
+    width: 95%;
+    object-fit: contain;
+    z-index: 99;
+}
+
+#lightbar > #lights
+{
+    background-color: lightgrey;
+    position: absolute;
+    width: 93%;
+    height: 8%;
+    left: 3.5%;
+    top: 18.5%;
+}
+
+#lights > #blue-left
+{
+    z-index: 50;
+    background-color: rgb(72, 188, 255);
+    position: absolute;
+    top: 0;
+    height: 49%;
+    width: 15%;
+
+    box-shadow:
+        0 0 40px 30px rgb(72, 188, 255),
+        0 0 80px 60px rgb(72, 188, 255)
+}
+
+#lights > #blue-right
+{
+    z-index: 50;
+    background-color: rgb(72, 188, 255);
+    position: absolute;
+    top: 0;
+    left: 85%;
+    height: 49%;
+    width: 15%;
+
+    box-shadow:
+        0 0 40px 30px rgb(72, 188, 255),
+        0 0 80px 60px rgb(72, 188, 255)
+}
+
+#lights > #amber-left
+{
+    z-index: 40;
+    background-color: rgb(252, 179, 44);
+    position: absolute;
+    top: 51%;
+    height: 50%;
+    width: 15%;
+
+    box-shadow:
+        0 0 40px 30px rgb(252, 179, 44),
+        0 0 80px 60px rgb(252, 179, 44);
+}
+
+#lights > #amber-right
+{
+    z-index: 40;
+    background-color: rgb(252, 179, 44);
+    position: absolute;
+    top: 51%;
+    left: 85%;
+    height: 50%;
+    width: 15%;
+
+    box-shadow:
+        0 0 40px 30px rgb(252, 179, 44),
+        0 0 80px 60px rgb(252, 179, 44);
+}
+
+#lights > #green-left
+{
+    z-index: 30;
+    background-color: lime;
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    height: 50%;
+    width: 5%;
+
+    box-shadow:
+        0 0 40px 30px lime,
+        0 0 80px 60px lime;
+}
+
+#white-front
+{
+    background-color: white;
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    left: 25%;
+    opacity: 0;
+
+    box-shadow:
+        0 0 40px 30px white,
+        0 0 80px 60px white;
+}
+
+#lights > :not(.on)
+{
+    opacity: 0;
+}
+
+#stop
+{
+    position: absolute;
+    top: 0;
+    left: 32.5%;
+    width: 35%;
+    height: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+.stop
+{
+    display: none;
+    font-size: 2rem;
+    color: red;
+
+    font-family: Verdana;
+    font-weight: bold;
+
+    text-shadow: 0 0 10px rgb(255, 124, 124);
+
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.politie
+{
+    display: none;
+    font-size: 2rem;
+    color: red;
+
+    font-family: Verdana;
+    font-weight: bold;
+
+    text-shadow: 0 0 10px rgb(255, 124, 124);
+
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.politie.show,
+.stop.show
+{
+    display: block;
+}
+
+#stop.on
+{
+    opacity: 1;
+}
+
+div.on.flashing
+{
+    animation: doubleflash .8s infinite;
+    -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -ms-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end);
+}
+
+div.on.flashing-alt
+{
+    animation: doubleflash .75s reverse infinite;
+    -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -ms-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end);
+}
+
+#green-left.on.flashing
+{
+    animation: flash 1.5s infinite;
+    -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -ms-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end);
+}
+
+#white-front.on
+{
+    opacity: 1;
+}
+
+@keyframes flash
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    50%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@keyframes doubleflash
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    25%
+    {
+        opacity: 1;
+    }
+
+    35%
+    {
+        opacity: 0;
+    }
+
+    40%
+    {
+        opacity: 1;
+    }
+
+    45%
+    {
+        opacity: 0;
+    }
+}

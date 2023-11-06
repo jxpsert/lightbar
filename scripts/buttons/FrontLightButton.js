@@ -1,5 +1,6 @@
 class FrontLightButton extends Button {
   _controller = null;
+  _flashing = false;
 
   constructor(controller, element) {
     super(element);
@@ -8,11 +9,37 @@ class FrontLightButton extends Button {
   }
 
   click = () => {
+    if (!this._controller._enabled) return;
+
     this.toggle();
     this._controller.beep();
+
+    if (this._enabled) {
+      document.querySelector("#white-front").classList.add("on");
+    } else {
+      document.querySelector("#white-front").classList.remove("on");
+    }
+
+    if (this._flashing) {
+      this.disable();
+
+      this._flashing = false;
+      clearInterval(this._flashInterval);
+    } else {
+      this.enable();
+      this._flashing = true;
+      this._flashInterval = setInterval(() => {
+        this.toggle();
+      }, 1000);
+    }
   };
 
   kill = () => {
     this.disable();
+    document.querySelector("#white-front").classList.remove("on");
+
+    this._flashing = false;
+
+    clearInterval(this._flashInterval);
   };
 }

@@ -38,7 +38,7 @@ controller.registerButton(
 
 controller.registerButton(
   "stopfront",
-  new IdleStopButton(controller, document.querySelector("#stopfront"))
+  new FrontStopButton(controller, document.querySelector("#stopfront"))
 );
 
 controller.registerButton(

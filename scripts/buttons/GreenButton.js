@@ -14,6 +14,9 @@ class GreenButton extends Button {
 
     if (this._flashing) {
       this.disable();
+
+      document.querySelector("#green-left").classList.remove("on");
+
       this._flashing = false;
       clearInterval(this._flashInterval);
     } else {
@@ -22,6 +25,8 @@ class GreenButton extends Button {
       this._flashInterval = setInterval(() => {
         this.toggle();
       }, 1000);
+
+      document.querySelector("#green-left").classList.add("on");
     }
     this._controller.beep();
   };

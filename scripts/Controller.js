@@ -87,6 +87,8 @@ class Controller {
     this._buttons["green"].disablePower();
     this._buttons["siren"].disablePower();
     this._buttons["blue"].disablePower();
+
+    this._siren.pause();
   };
 
   allOn = () => {

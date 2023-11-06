@@ -45,7 +45,7 @@ class SirenButton extends Button {
 
   kill = () => {
     this.disable();
-    clearInterval(this._flashInterval);
     this._flashing = false;
+    clearInterval(this._flashInterval);
   };
 }

@@ -1,0 +1,100 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    height: 100%;
+}
+
+#lights
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #c2c2c2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.light
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    opacity: 0;
+}
+
+#blue
+{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+#blue-right
+{
+    right: 0;
+    background-color: #0000ff;
+}
+
+#blue-left
+{
+    left: 0;
+    background-color: #0000ff;
+}
+
+#amber-right
+{
+    right: 0;
+    bottom: 0;
+    background-color: #ffbf00;
+}
+
+#amber-left
+{
+    left: 0;
+    bottom: 0;
+    background-color: #ffbf00;
+}
+
+div.on > .flashing
+{
+    animation: flashing .75s linear infinite;
+}
+
+div.on > .flashing-alt
+{
+    animation: flashing .75s reverse linear infinite;
+}
+
+@keyframes flashing
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    25%
+    {
+        opacity: 1;
+    }
+
+    35%
+    {
+        opacity: 0;
+    }
+
+    40%
+    {
+        opacity: 1;
+    }
+
+    45%
+    {
+        opacity: 0;
+    }
+}
